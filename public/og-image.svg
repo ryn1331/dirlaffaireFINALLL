@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Dir l'Affaire">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#E9E4D7"/>
+      <stop offset="100%" stop-color="#C7D1BE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="80" y="80" width="1040" height="470" rx="40" fill="#2F3A2F"/>
+  <text x="140" y="240" font-family="Arial, sans-serif" font-size="68" fill="#FFFFFF">Dir l'Affaire</text>
+  <text x="140" y="320" font-family="Arial, sans-serif" font-size="32" fill="#E9E4D7">Beauté & compléments premium en Algérie</text>
+  <text x="140" y="410" font-family="Arial, sans-serif" font-size="24" fill="#C7D1BE">Supabase • Vite • React</text>
+</svg>

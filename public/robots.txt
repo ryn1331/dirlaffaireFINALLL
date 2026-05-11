@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /admin/
 
-Sitemap: https://dirlaffaire.lovable.app/sitemap.xml
+Sitemap: /sitemap.xml
