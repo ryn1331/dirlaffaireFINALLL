@@ -1,0 +1,135 @@
+/* Fonts loaded via index.html <link> for performance */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 25% 97%;
+    --foreground: 30 10% 15%;
+    --card: 30 20% 99%;
+    --card-foreground: 30 10% 15%;
+    --popover: 30 20% 99%;
+    --popover-foreground: 30 10% 15%;
+    --primary: 135 12% 40%;
+    --primary-foreground: 30 20% 97%;
+    --secondary: 30 20% 93%;
+    --secondary-foreground: 135 12% 32%;
+    --muted: 30 15% 93%;
+    --muted-foreground: 30 8% 48%;
+    --accent: 30 40% 50%;
+    --accent-foreground: 30 20% 97%;
+    --destructive: 0 65% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 15% 90%;
+    --input: 30 15% 91%;
+    --ring: 135 12% 40%;
+    --radius: 0.75rem;
+
+    --sidebar-background: 30 10% 12%;
+    --sidebar-foreground: 30 15% 92%;
+    --sidebar-primary: 30 40% 50%;
+    --sidebar-primary-foreground: 30 10% 12%;
+    --sidebar-accent: 30 10% 18%;
+    --sidebar-accent-foreground: 30 15% 92%;
+    --sidebar-border: 30 10% 20%;
+    --sidebar-ring: 30 40% 50%;
+
+    /* Custom tokens */
+    --gold: 30 40% 50%;
+    --sage: 135 12% 40%;
+    --sand: 30 25% 93%;
+    --blush: 15 35% 88%;
+    --surface: 30 20% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: contain;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(135 12% 40%), hsl(135 12% 48%));
+  }
+  .gradient-warm {
+    background: linear-gradient(135deg, hsl(30 25% 93%), hsl(30 20% 97%));
+  }
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(30 10% 12%), hsl(30 8% 18%));
+  }
+  .price-tag {
+    @apply font-heading font-bold text-foreground;
+  }
+  .badge-promo {
+    @apply bg-accent text-accent-foreground font-body font-semibold text-[10px] px-2.5 py-0.5 rounded-full tracking-wide uppercase;
+  }
+  .badge-top {
+    @apply bg-foreground text-background font-body font-semibold text-[10px] px-2.5 py-0.5 rounded-full tracking-wide uppercase;
+  }
+  .badge-category {
+    @apply text-[10px] font-medium px-2.5 py-0.5 rounded-full bg-secondary text-muted-foreground tracking-wide;
+  }
+  .gold-underline {
+    @apply relative inline-block;
+  }
+  .gold-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[2px] rounded-full;
+    background: hsl(var(--accent));
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:shadow-foreground/5 hover:-translate-y-0.5;
+  }
+
+  /* iOS safe area */
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(30 15% 82%);
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(30 10% 65%);
+  }
+}
+
+@layer components {
+  .field-input {
+    @apply w-full h-11 rounded-xl bg-card border border-border px-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
